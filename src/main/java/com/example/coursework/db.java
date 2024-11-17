@@ -7,8 +7,8 @@ public class db {
         Connection connect = null;
         try{
             Class.forName("org.postgresql.Driver");
-            connect = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
-            connect.setSchema("kurs");
+            connect = DriverManager.getConnection("jdbc:postgresql://localhost:15432/postgres", "postgres", "123321");
+            connect.setSchema("public");
         } catch (Exception e){
             e.printStackTrace();
         }
