@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="875.0" prefWidth="1314.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.functionsController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0D0D0D;">
+         <children>
+            <BorderPane layoutX="130.0" layoutY="58.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="152.0" prefWidth="1314.0" stylesheets="@Design.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="7.0" prefHeight="152.0" prefWidth="1314.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text fill="#fce6dd" layoutX="24.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДОМИНО">
+                                 <font>
+                                    <Font name="System Bold" size="23.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="close" layoutX="1270.0" layoutY="18.0" mnemonicParsing="false" onAction="#close" style="-fx-background-radius: 90; -fx-background-color: #C41E3A;" textFill="#f21905">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#fce6dd" glyphName="CLOSE" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minimize" layoutX="1230.0" layoutY="19.0" mnemonicParsing="false" onAction="#minimize" style="-fx-background-radius: 90; -fx-background-color: #fce6dd;">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#1c273f" glyphName="MINUS" />
+                                 </graphic>
+                              </Button>
+                              <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="93.0" prefHeight="30.0" prefWidth="165.0" text="USER" textAlignment="CENTER" textFill="#fce6dd">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="home_btn" layoutX="423.0" layoutY="86.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="141.0" style="-fx-background-radius: 20; -fx-border-width: 2; -fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" text="Home" textAlignment="CENTER" textFill="#d9d2d0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#d9d2d0" glyphName="HOME" size="20" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="add_products_btn" layoutX="588.0" layoutY="86.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="141.0" style="-fx-background-radius: 20; -fx-border-width: 2; -fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" text="Add products" textAlignment="CENTER" textFill="#d9d2d0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#d9d2d0" glyphName="PLUS" size="20" textAlignment="CENTER" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="logout" layoutX="1199.0" layoutY="87.0" mnemonicParsing="false" onAction="#logout" prefHeight="43.0" prefWidth="97.0" style="-fx-background-radius: 20; -fx-background-color: transparent; -fx-border-radius: 20; -fx-border-color: #D9D2D0;" text="Logout" textFill="#d9d2d0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#d9d2d0" glyphName="SIGN_OUT" size="15" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="order_btn" layoutX="750.0" layoutY="86.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="141.0" style="-fx-background-radius: 20; -fx-border-width: 2; -fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" text="Orders" textAlignment="CENTER" textFill="#d9d2d0">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#d9d2d0" glyphName="LIST_ALT" size="20" textAlignment="CENTER" />
+                                 </graphic>
+                              </Button>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" layoutX="162.0" layoutY="75.0" prefHeight="723.0" prefWidth="1314.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="683.0" prefWidth="1280.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" stylesheets="@Design.css">
+                                 <children>
+                                    <AnchorPane layoutX="11.0" layoutY="9.0" prefHeight="198.0" prefWidth="1253.0" stylesheets="@Design.css">
+                                       <children>
+                                          <AnchorPane fx:id="home_anchorProcessing" accessibleRole="BUTTON" layoutX="120.0" layoutY="27.0" onMouseClicked="#loadChartForProcessing" prefHeight="146.0" prefWidth="250.0" styleClass="card" stylesheets="@Design.css">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="CLOCK_ALT" layoutX="14.0" layoutY="94.0" size="60" />
+                                                <Text fill="WHITE" layoutX="13.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of orders in processing" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="home_totalOrderProcessing" alignment="CENTER_RIGHT" layoutX="70.0" layoutY="14.0" prefHeight="45.0" prefWidth="150.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="home_anchorCompleted" accessibleRole="BUTTON" layoutX="509.0" layoutY="27.0" onMouseClicked="#loadChartForCompleted" prefHeight="146.0" prefWidth="250.0" styleClass="card" stylesheets="@Design.css">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="14.0" layoutY="94.0" size="60" />
+                                                <Text fill="WHITE" layoutX="22.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of completed orders" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="home_totalOrderCompleted" alignment="CENTER_RIGHT" layoutX="81.0" layoutY="14.0" prefHeight="45.0" prefWidth="150.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                             </children></AnchorPane>
+                                          <AnchorPane fx:id="home_anchorCancelled" accessibleRole="BUTTON" layoutX="910.0" layoutY="27.0" onMouseClicked="#loadChartForCancelled" prefHeight="146.0" prefWidth="250.0" styleClass="card" stylesheets="@Design.css">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="14.0" layoutY="94.0" size="60" />
+                                                <Label fx:id="home_totalOrderCancelled" alignment="CENTER_RIGHT" layoutX="86.0" layoutY="14.0" prefHeight="45.0" prefWidth="150.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text fill="WHITE" layoutX="27.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of cancelled orders" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Text>
+                                             </children></AnchorPane>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AreaChart fx:id="home_chart" layoutX="233.0" layoutY="220.0" prefHeight="443.0" prefWidth="814.0" stylesheets="@Design.css" title="Orders data">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </AreaChart>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="add_product_form" prefHeight="723.0" prefWidth="1314.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="679.0" prefWidth="1282.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" stylesheets="@Design.css">
+                                 <children>
+                                    <AnchorPane layoutX="27.0" layoutY="22.0" prefHeight="456.0" prefWidth="901.0" stylesheets="@Design.css">
+                                       <children>
+                                          <TableView fx:id="add_product_tableview" layoutX="13.0" layoutY="23.0" onMouseClicked="#addProductSelect" prefHeight="373.0" prefWidth="875.0" stylesheets="@Design.css">
+                                             <columns>
+                                                <TableColumn fx:id="add_product_col_id" prefWidth="26.0" text="ID" />
+                                                <TableColumn fx:id="add_product_col_name" prefWidth="160.0" text="Name" />
+                                                <TableColumn fx:id="add_product_col_quantity" prefWidth="54.0" text="Quantity" />
+                                                <TableColumn fx:id="add_product_col_manufacturer" prefWidth="105.0" text="Manufacturer" />
+                                                <TableColumn fx:id="add_product_col_provider" prefWidth="103.0" text="Provider" />
+                                                <TableColumn fx:id="add_product_col_catalog" prefWidth="48.0" text="Catalog" />
+                                                <TableColumn fx:id="add_product_col_price" prefWidth="89.0" text="Price" />
+                                                <TableColumn fx:id="add_product_col_composition" prefWidth="288.0" text="Composition" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="add_product_search" layoutX="14.0" layoutY="404.0" prefHeight="31.0" prefWidth="334.0" promptText="Search" styleClass="searc" stylesheets="@Design.css" />
+                                          <FontAwesomeIcon fill="#0d0d0d" glyphName="SEARCH" layoutX="317.0" layoutY="425.0" size="18" />
+                                          <Button fx:id="add_product_addbtn" layoutX="378.0" layoutY="404.0" mnemonicParsing="false" onAction="#addProductsAdd" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="PLUS" size="20" textAlignment="CENTER" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="add_product_updatebtn" layoutX="508.0" layoutY="404.0" mnemonicParsing="false" onAction="#addProductUpdate" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="REFRESH" size="20" textAlignment="CENTER" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="add_product_clearbtn" layoutX="638.0" layoutY="403.0" mnemonicParsing="false" onAction="#addProductsReset" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="HISTORY" size="20" textAlignment="CENTER" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="add_product_deletebtn" layoutX="768.0" layoutY="403.0" mnemonicParsing="false" onAction="#addProductDelete" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                             <graphic>
+                                                <FontAwesomeIcon glyphName="TRASH" size="20" textAlignment="CENTER" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product id" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="add_product_id" layoutX="164.0" layoutY="494.0" prefWidth="291.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name product" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="add_product_name" layoutX="164.0" layoutY="527.0" prefWidth="291.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="add_product_quantity" layoutX="164.0" layoutY="560.0" prefWidth="291.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufacturer" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="add_product_manufacturer" layoutX="164.0" layoutY="593.0" prefWidth="291.0" promptText="Choose" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="534.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provider" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="add_product_provider" layoutX="601.0" layoutY="496.0" prefWidth="291.0" promptText="Choose" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="536.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Catalog" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="add_product_catalog" layoutX="601.0" layoutY="529.0" prefHeight="29.0" prefWidth="291.0" promptText="Choose" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="536.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="add_product_price" layoutX="601.0" layoutY="562.0" prefHeight="29.0" prefWidth="291.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <AnchorPane layoutX="957.0" layoutY="25.0" prefHeight="236.0" prefWidth="265.0" stylesheets="@Design.css">
+                                       <children>
+                                          <ImageView fx:id="add_product_image" fitHeight="235.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="add_product_importbtn" layoutX="63.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#addProductsInsertImage" prefHeight="30.0" prefWidth="140.0" styleClass="textfield" stylesheets="@Design.css" text="Import" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <TextArea fx:id="add_products_composition" layoutX="957.0" layoutY="292.0" prefHeight="351.0" prefWidth="267.0" stylesheets="@Design.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </TextArea>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="orders_form" layoutX="54.0" layoutY="49.0" prefHeight="550.0" prefWidth="923.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="24.0" layoutY="102.0" prefHeight="249.0" prefWidth="621.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" stylesheets="@Design.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                                    <Label layoutX="236.0" layoutY="14.0" text="Edit/Add orders" textFill="#d9d2d0">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="orders_id" layoutX="148.0" layoutY="62.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
+                                    <ComboBox fx:id="orders_user" layoutX="148.0" layoutY="97.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="64.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick up point" />
+                                    <ComboBox fx:id="orders_pick_up_point" layoutX="148.0" layoutY="132.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="346.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+                                    <ComboBox fx:id="orders_status" layoutX="408.0" layoutY="62.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="348.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product" />
+                                    <ComboBox fx:id="orders_product" layoutX="408.0" layoutY="97.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Text fill="#d9d2d0" layoutX="346.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
+                                    <TextField fx:id="orders_quantity" layoutX="408.0" layoutY="132.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Design.css" />
+                                    <Button fx:id="orders_addbtn" layoutX="261.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#addOrder" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#d9d2d0" glyphName="PLUS" size="20" textAlignment="CENTER" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="orders_updatebtn" layoutX="141.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#ordersUpdate" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#d9d2d0" glyphName="REFRESH" size="20" text="" textAlignment="CENTER" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="orders_clearBtn" layoutX="382.0" layoutY="184.0" mnemonicParsing="false" onAction="#ordersReset" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" textAlignment="CENTER">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="#d9d2d0" glyphName="HISTORY" size="20" textAlignment="CENTER" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="693.0" layoutY="102.0" prefHeight="520.0" prefWidth="598.0" style="-fx-background-color: transparent; -fx-border-color: #D9D2D0; -fx-border-radius: 20;" stylesheets="@Design.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="orders_tableview" layoutX="14.0" layoutY="54.0" onMouseClicked="#ordersSelect" prefHeight="450.0" prefWidth="565.0" stylesheets="@Design.css">
+                                       <columns>
+                                          <TableColumn fx:id="orders_col_id" prefWidth="55.0" text="ID" />
+                                          <TableColumn fx:id="orders_col_user" prefWidth="95.0" text="User" />
+                                          <TableColumn fx:id="orders_col_pick_up_point" prefWidth="119.0" text="Pick up point" />
+                                          <TableColumn fx:id="orders_col_status" text="Status" />
+                                          <TableColumn fx:id="orders_col_product" prefWidth="143.0" text="Product" />
+                                          <TableColumn fx:id="orders_col_quantity" prefWidth="71.0" text="Quantity" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="orders_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="270.0" promptText="Search" styleClass="search" stylesheets="@Design.css" />
+                                    <FontAwesomeIcon fill="#d9d2d0" glyphName="SEARCH" layoutX="260.0" layoutY="35.0" size="18" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

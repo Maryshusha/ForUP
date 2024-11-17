@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: maryshusha 
+    environment: 
+      - POSTGRES_DB=postgres  
+      - POSTGRES_USER=postgres     
+      - POSTGRES_PASSWORD=123321  
+    ports: 
+      - "15432:5432" 
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data 
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+    networks: 
+      - my_network 
+ 
+  pgadmin: 
+    image: dpage/pgadmin4 
+    container_name: my_pgadmin 
+    environment: 
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports: 
+      - "8080:80" 
+    networks: 
+      - my_network 
+ 
+volumes: 
+  postgres_data: 
+ 
+networks: 
+  my_network:

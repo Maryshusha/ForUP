@@ -1,0 +1,93 @@
+.main_background{
+    -fx-background-color: #0D0D0D;
+}
+
+.authorizationfields {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 15px;
+    -fx-border-color: #fce6dd;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}
+
+.left_btns{
+    -fx-background-radius: 10;
+    -fx-background-color:  #fce6dd;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+}
+
+.card{
+    -fx-background-color: #0D0D0D;
+    -fx-background-radius: 10px;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #0D0D0D;
+    -fx-border-radius: 15;
+    -fx-border-width: 2px;
+    -fx-padding: 0px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0D0D0D;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFF;
+}
+
+.textfield {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 15px;
+    -fx-border-color:  #D9D2D0;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}
+
+.textfield:focused {
+    -fx-border-width: 2.5px;
+    -fx-background-color: #FFF;
+}
+
+.search {
+    -fx-background-color: transparent;
+    -fx-border-color:  #D9D2D0;
+    -fx-border-radius: 10px;
+    -fx-font-size: 13px;
+    -fx-border-width: 2px;
+    -fx-text-fill: #FFF;
+}
+
+.search:focused {
+    -fx-border-width: 2.5px;
+    -fx-text-fill: #FFF;
+}
+.searc {
+    -fx-background-color: transparent;
+    -fx-border-color:  #D9D2D0;
+    -fx-border-radius: 10px;
+    -fx-font-size: 13px;
+    -fx-border-width: 2px;
+    -fx-text-fill: #000;
+}
+
+.searc:focused {
+    -fx-border-width: 2.5px;
+    -fx-text-fill: #000;
+}
